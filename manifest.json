@@ -1,0 +1,13 @@
+{
+    "dictionaries": {
+        "ennl": "dictionaries/ennl.dic"
+    },
+    "version": "0.0.1",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "ennl@dictionaries.addons.mozilla.org"
+        }
+    },
+    "name": "Combined English and Dutch dictionary",
+    "manifest_version": 2
+}
