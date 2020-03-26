@@ -1,67 +1,29 @@
-# Hunspell affix file
-# (c) 2006-2011 OpenTaal
-# Coded by R. Baars
-# www.opentaal.org
-# version 2.10G
-# version date 2011-09-23
+# Affix file for British English MySpell dictionary.
+# Also suitable as basis for Commonwealth and European English.
+# Built from scratch for MySpell. Released under LGPL.
+#
+# Sources used to verify the spelling of the words which
+# Marco Pinto included in the dictionary:
+#   1) Oxford Dictionaries;    5) Merriam-Webster Dictionary (used with caution ⚠);
+#   2) Collins Dictionary;     6) Wiktionary (used with caution ⚠);
+#   3) Macmillan Dictionary;   7) Wikipedia (used with caution ⚠);
+#   4) Cambridge Dictionary;   8) Physical dictionaries.
+#
+# Main difficulties developing this dictionary:
+#   1) Proper names;
+#   2) Possessive forms;
+#   3) Plurals.
+#
+# David Bartlett, Andrew Brown, Marco A.G.Pinto.
+# V 2.83, 2020-04-01
 
-# BEWARE: THIS AFFIX FILE AND DICTIONARY REQUIRE HUNSPELL 1.3.1 AS MINIMAL VERSION
-
-# define char set
 SET UTF-8
 
-# statistical order as shown by Pander, except for the -, ‘’ and capitals
-# Dutch one:
-# TRY  -ernitsaoldgkupmchbvjwfzyx'’ëqïéèö.êü12635407çà8û9îñäôERNITSAOLDGKUPMCHBVJWFZYX
-# English one:
 TRY esiaénrtolcdugmfphbyvkw-'.zqjxSNRTLCGDMFPHBEAUYOIVKWóöâôZQJXÅçèîêàïüäñ
 
-# combined layout for BE and NL keyboards NL en BE
-KEY qwertyuiop|asdfghjkl|zxcvbnm|qawsedrftgyhujikolp|azsxdcfvgbhnjmk|aze|qsd|lm|wx|aqz|qws|
+ICONV 1
+ICONV ’ '
 
-WORDCHARS '’0123456789ĳ.-\/
-# . is only useful as wordchar from the command line
-# \/ should make the / acceptable as part of word (km/h)
-# the way applications offer words to the Hunspell interface apperently differs,
-# causing problems with abbreviations and end-of-sentence words.
-# Issue has been communicated with Hunspell's author.
-
-# do not offer split words (to prevent English decease, splitting up words)
-NOSPLITSUGS
-
-# maximum number of compound suggestions
-# limit to 1 to prevent nonsense suggestions
-MAXCPDSUGS 1
-
-# max difference to be applied for all words (compounds and n-gram suggestions)
-ONLYMAXDIFF 
-
-# max difference in chars for ngram suggestions
-# 3 limits wild suggestions a lot, but also drops suggestions for words with multiple errors
-MAXDIFF 3
-
-# avoid wrong spelling of letterwords in full uppercase (DVD should be dvd)
-KEEPCASE Kc
-
-# set the flag for warning with confusing words (kunne)
-WARN Wn
-
-# force uppercase for some word ends
-FORCEUCASE Fu
-
-# BREAK 0 causes the - to be seen as part of the word,
-# which is necessary to support the optional - in compounded words
-BREAK 0
-
-# use double chars as flags, for more choice and readability
-# For readability reasons, use of flags is (mostly) restricted tu Upper-Lowercase combinations
-FLAG long
-
-# explicitly forbid words
-FORBIDDENWORD Fw
-
-# don't suggest words with extra accents
-NOSUGGEST NS
 NOSUGGEST !
 
 # ordinal numbers
@@ -1377,6 +1339,68 @@ SFX = 0 lessnesses [^l]l
 SFX = 0 lessness [^ly]
 SFX = 0 lessness's [^ly]
 SFX = 0 lessnesses [^ly]
+
+# Hunspell affix file
+# (c) 2006-2011 OpenTaal
+# Coded by R. Baars
+# www.opentaal.org
+# version 2.10G
+# version date 2011-09-23
+
+# BEWARE: THIS AFFIX FILE AND DICTIONARY REQUIRE HUNSPELL 1.3.1 AS MINIMAL VERSION
+
+# define char set
+SET UTF-8
+
+# statistical order as shown by Pander, except for the -, ‘’ and capitals
+TRY  -ernitsaoldgkupmchbvjwfzyx'’ëqïéèö.êü12635407çà8û9îñäôERNITSAOLDGKUPMCHBVJWFZYX
+
+# combined layout for BE and NL keyboards NL en BE
+KEY qwertyuiop|asdfghjkl|zxcvbnm|qawsedrftgyhujikolp|azsxdcfvgbhnjmk|aze|qsd|lm|wx|aqz|qws|
+
+WORDCHARS '’0123456789ĳ.-\/
+# . is only useful as wordchar from the command line
+# \/ should make the / acceptable as part of word (km/h)
+# the way applications offer words to the Hunspell interface apperently differs,
+# causing problems with abbreviations and end-of-sentence words.
+# Issue has been communicated with Hunspell's author.
+
+# do not offer split words (to prevent English desease, splitting up words)
+NOSPLITSUGS
+
+# maximum number of compound suggestions
+# limit to 1 to prevent nonsense suggestions
+MAXCPDSUGS 1
+
+# max difference to be applied for all words (compounds and n-gram suggestions)
+ONLYMAXDIFF 
+
+# max difference in chars for ngram suggestions
+# 3 limits wild suggestions a lot, but also drops suggestions for words with multiple errors
+MAXDIFF 3
+
+# avoid wrong spelling of letterwords in full uppercase (DVD should be dvd)
+KEEPCASE Kc
+
+# set the flag for warning with confusing words (kunne)
+WARN Wn
+
+# force uppercase for some word ends
+FORCEUCASE Fu
+
+# BREAK 0 causes the - to be seen as part of the word,
+# which is necessary to support the optional - in compounded words
+BREAK 0
+
+# use double chars as flags, for more choice and readability
+# For readability reasons, use of flags is (mostly) restricted tu Upper-Lowercase combinations
+FLAG long
+
+# explicitly forbid words
+FORBIDDENWORD Fw
+
+# don't suggest words with extra accents
+NOSUGGEST NS
 
 # make calculation of alternatives better for words with accents
 MAP 5
